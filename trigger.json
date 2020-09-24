@@ -1,5 +1,6 @@
 {
   "name": "mytimertrigger",
+  "title": "Receive HTTP Message",
   "version": "0.0.1",
   "type": "flogo:trigger",
   "ref": "github.com/asepsetiawaaan/mytimertrigger",
