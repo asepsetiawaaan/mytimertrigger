@@ -1,23 +1,22 @@
 package mytimertrigger
 
 import (
-	"github.com/TIBCOSoftware/flogo-lib/core/action"
 	"github.com/TIBCOSoftware/flogo-lib/core/trigger"
 )
 
 // MyTriggerFactory My Trigger factory
-type MyTriggerFactory struct{
+type MyTriggerFactory struct {
 	metadata *trigger.Metadata
 }
 
 // NewFactory create a new Trigger factory
 func NewFactory(md *trigger.Metadata) trigger.Factory {
-	return &MyTriggerFactory{metadata:md}
+	return &MyTriggerFactory{metadata: md}
 }
 
 // New Creates a new trigger instance for a given id
 func (t *MyTriggerFactory) New(config *trigger.Config) trigger.Trigger {
-	return &MyTrigger{metadata: t.metadata, config:config}
+	return &MyTrigger{metadata: t.metadata, config: config}
 }
 
 // MyTrigger is a stub for your Trigger implementation
