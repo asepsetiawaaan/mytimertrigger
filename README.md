@@ -1,2 +1,2 @@
 
-# 	mytimertrigger - Trigger
+# 	testTrigger - Trigger
