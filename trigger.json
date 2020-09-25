@@ -1,5 +1,5 @@
 {
-  "name": "testTrigger",
+  "name": "mytimertrigger",
   "title": "Cudo Trigger Http Post",
   "version": "0.0.1",
   "type": "flogo:trigger",
