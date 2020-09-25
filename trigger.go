@@ -37,12 +37,6 @@ func (*Factory) Metadata() *trigger.Metadata {
 	return triggerMd
 }
 
-// NewFactory create a new Trigger factory
-func NewFactory(md *trigger.Metadata) trigger.Factory {
-	return &Factory{}
-	// return triggerMd
-}
-
 // New implements trigger.Factory.New
 func (*Factory) New(config *trigger.Config) (trigger.Trigger, error) {
 	s := &Settings{}
