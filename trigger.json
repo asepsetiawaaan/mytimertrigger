@@ -1,6 +1,6 @@
 {
   "name": "mytimertrigger",
-  "title": "Cudo Trigger Http Post",
+  "title": "Cudo Http Post",
   "version": "0.0.1",
   "type": "flogo:trigger",
   "ref": "github.com/asepsetiawaaan/mytimertrigger",
