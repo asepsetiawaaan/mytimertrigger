@@ -11,7 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"cudo.flogo.trigger/mytimertrigger/cors"
+	"mytimertrigger/cors"
+
 	"github.com/julienschmidt/httprouter"
 	"github.com/project-flogo/core/data/metadata"
 	"github.com/project-flogo/core/support/log"
