@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"mytimertrigger/cors"
+	"github.com/asepsetiawaaan/mytimertrigger/cors"
 
 	"github.com/julienschmidt/httprouter"
 	"github.com/project-flogo/core/data/metadata"
