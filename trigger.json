@@ -1,6 +1,6 @@
 {
   "name": "mytimertrigger",
-  "title": "Receive HTTP Message",
+  "title": "Cudo Trigger Http Post",
   "version": "0.0.1",
   "type": "flogo:trigger",
   "ref": "github.com/asepsetiawaaan/mytimertrigger",
@@ -8,9 +8,10 @@
   "author": "Your Name <you.name@example.org>",
   "settings": [
     {
-      "name": "setting",
-      "type": "string",
-      "value": "default"
+      "name": "port",
+      "type": "int",
+      "required": true,
+      "description": "The port to listen on"
     }
   ],
   "output": [
@@ -22,8 +23,23 @@
   "handler": {
     "settings": [
       {
-        "name": "handler_setting",
-        "type": "string"
+        "name": "method",
+        "type": "string",
+        "required": true,
+        "allowed": [
+          "GET",
+          "POST",
+          "PUT",
+          "PATCH",
+          "DELETE"
+        ],
+        "description": "The HTTP method (ie. GET,POST,PUT,PATCH or DELETE)"
+      },
+      {
+        "name": "path",
+        "type": "string",
+        "required": true,
+        "description": "The resource path"
       }
     ]
   }
