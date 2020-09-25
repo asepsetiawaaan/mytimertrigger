@@ -30,12 +30,6 @@ func init() {
 }
 
 type Factory struct {
-	metadata *trigger.Metadata
-}
-
-// NewFactory create a new Trigger factory
-func NewFactory(md *trigger.Metadata) trigger.Factory {
-	return &Factory{metadata: md}
 }
 
 // Metadata implements trigger.Factory.Metadata
