@@ -12,7 +12,9 @@ import (
 	"strings"
 
 	"github.com/asepsetiawaaan/mytimertrigger/cors"
+	"github.com/spf13/cast"
 
+	tr "github.com/TIBCOSoftware/flogo-lib/core/trigger"
 	"github.com/julienschmidt/httprouter"
 	"github.com/project-flogo/core/data/metadata"
 	"github.com/project-flogo/core/support/log"
@@ -23,7 +25,14 @@ const (
 	CorsPrefix = "REST_TRIGGER"
 )
 
-var triggerMd = trigger.NewMetadata(&Settings{}, &HandlerSettings{}, &Output{}, &Reply{})
+var arr = map[string]interface{}{
+	"HandlerSettings": &HandlerSettings{},
+	"Settings":        &Settings{},
+	"Output":          &Output{},
+	"Reply":           &Reply{},
+}
+var strMeta, _ = json.Marshal(arr)
+var triggerMd = tr.NewMetadata(cast.ToString(strMeta))
 
 func init() {
 	_ = trigger.Register(&Trigger{}, &Factory{})
@@ -35,7 +44,8 @@ type Factory struct {
 
 // Metadata implements trigger.Factory.Metadata
 func (*Factory) Metadata() *trigger.Metadata {
-	return triggerMd
+	var md = trigger.NewMetadata(arr)
+	return md
 }
 
 // NewFactory create a new Trigger factory
